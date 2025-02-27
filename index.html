@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>task1</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header>
+    <h1>My Website</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Services</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <div class="container">
+    <div class="text-image">
+      <img src="it image 1.jpg" alt="woman" class="image-left">
+      <p class="text-right">Hello! I'm Lorel, a passionate web developer with a keen eye for design and a love for problem-solving...</p>
+    </div>
+
+    <div class="text">
+      <p>Hello! I'm Sunny, a passionate graphic designer with a keen eye for design and a love for problem-solving...</p>
+      <img src="it image 4.jpg" alt="rectangular image" class="image-circle">
+    </div>
+  </div>
+
+
+
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slider</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="slider-container">
+    <button class="prev" onclick="prevSlide()">&#10094;</button>
+    <div class="slider">
+        <div class="slide"><img src="slider image 3.jpg" alt="Image 1"></div>
+        <div class="slide"><img src="slider image 2.jpg" alt="Image 2"></div>
+        <div class="slide"><img src="slider image 2 copy.jpg" alt="Image 3"></div>
+    </div>
+    <button class="next" onclick="nextSlide()">&#10095;</button>
+</div>
+
+
+<script src="script.js"></script>
+</body>
+</html>
+
+  <!-- FOOTER -->
+  <footer>
+    &copy; 2025 My Website | All Rights Reserved
+  </footer>
+
+  <script>
+    let index = 0;
+    function showSlide(n) {
+      let slides = document.getElementsByClassName("slide");
+      if (n >= slides.length) index = 0;
+      if (n < 0) index = slides.length - 1;
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slides[index].style.display = "block";
+    }
+    function changeSlide(n) {
+      index += n;
+      showSlide(index);
+    }
+    setInterval(() => { changeSlide(1); }, 3000);
+    showSlide(index);
+  </script>
+
+</body>
+</html>
